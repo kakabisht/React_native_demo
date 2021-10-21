@@ -61,7 +61,9 @@ const MyComponent = () => {
         <Button
           icon="android"
           mode="outlined"
-          onPress={() => Linking.openURL("https://kakabisht.github.io/")}
+          onPress={() =>
+            Linking.openURL("https://github.com/kakabisht/React_native_demo")
+          }
           style={styles.btn}
         >
           Press me
