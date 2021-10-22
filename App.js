@@ -1,5 +1,8 @@
+// Importing Libraries from React and React Native
 import * as React from "react";
 import { Text, StyleSheet, View, ScrollView, Linking } from "react-native";
+
+// Using an open source Node package, "react native paper".
 import {
   Card,
   Provider,
@@ -10,17 +13,19 @@ import {
 } from "react-native-paper";
 
 const MyComponent = () => {
+  // Simple arrow functions
   const _goBack = () => alert("Went Back");
 
   const _handleMore = () => alert("Shown more");
 
   return (
+    // The <Provider> component makes the Redux store available to any nested components that need to access the Redux store.
     <Provider>
       <Appbar.Header>
         <Appbar.BackAction onPress={_goBack} />
         <Appbar.Content
           title="Our Application"
-          subtitle="By Aayushi, Bisht and Kavya"
+          subtitle="By Aayushi, Hridyesh and Kavya"
         />
         <Appbar.Action icon="dots-vertical" onPress={_handleMore} />
       </Appbar.Header>
@@ -66,13 +71,14 @@ const MyComponent = () => {
           }
           style={styles.btn}
         >
-          Press me
+          Press me to get source code
         </Button>
       </ScrollView>
     </Provider>
   );
 };
 
+// Giving CSS styling to our components
 const styles = StyleSheet.create({
   image: {
     width: 345,
